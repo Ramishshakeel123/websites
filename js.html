@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<style>
+  div#counter {
+  font-weight: normal;
+  letter-spacing:5px;
+  padding: 6px;
+  font-size: 1.8em;
+  font-family: 'Gill Sans';
+  width: 500px;
+  text-align: center;
+  height: auto;
+  color: #333;
+  display:block;
+  margin:0px auto;
+}  
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="stuff"></div>
+
+    <script>
+ var count = 1;
+
+function lemath()
+{    
+    count++;
+    var stuff = document.getElementById('stuff');
+    stuff.innerHTML = "stuff: " + count;
+}
+
+function begin()
+{
+    lemath();
+    setTimeout(begin, 3, window);
+}
+
+document.addEventListener('DOMContentLoaded', function () {    
+    begin();
+});  
+    </script>
+</body>
+</html>
